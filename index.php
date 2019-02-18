@@ -1,16 +1,11 @@
-<?php
+<?php 
 
+require_once("config.php");
 
-	echo "Ola Mundo 456!!";
+$sql = new Sql();
 
-	echo "Hello Word";
+$usuarios = $sql->select("SELECT * FROM tb_usuarios ORDER BY idusuario");
 
-	echo "ola Mestre";
+echo json_encode($usuarios);
 
-	echo "Ola Mundo 123!!";
-
-	echo "ultimo teste";
-
-	echo "Ola Rodrigo";
-
-?>
+ ?>
